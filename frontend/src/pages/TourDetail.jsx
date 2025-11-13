@@ -20,9 +20,9 @@ import {
 } from '@chakra-ui/react';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import { getTour } from '../api/tourApi';
 import { bookTour } from '../api/bookingApi';
-import { getReviewsByTour } from '../api/reviewApi';
+import { useTourStore } from '../store/useTourStore';
+import { useReviewStore } from '../store/useReviewStore';
 import {
   FiClock,
   FiUsers,
@@ -36,10 +36,18 @@ import ReviewCard from '../components/ReviewCard';
 
 export default function TourDetail() {
   const { slug } = useParams();
-  const [tour, setTour] = useState(null);
-  const [reviews, setReviews] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [selectedDate, setSelectedDate] = useState(null);
+
+  // Zustand store hooks
+  const {
+    tours,
+    currentTour: tour,
+    setCurrentTour,
+    fetchTour,
+    loading: tourLoading,
+  } = useTourStore();
+
+  const { reviews, fetchReviews, loading: reviewLoading } = useReviewStore();
 
   const bg = useColorModeValue('gray.50', 'gray.900');
   const cardBg = useColorModeValue('white', 'gray.800');
@@ -47,20 +55,23 @@ export default function TourDetail() {
   const borderColor = useColorModeValue('gray.200', 'gray.700');
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const tourData = await getTour(slug);
-        setTour(tourData);
-        const reviewData = await getReviewsByTour(tourData._id);
-        setReviews(reviewData);
-      } finally {
-        setLoading(false);
-      }
-    };
-    fetchData();
-  }, [slug]);
+    if (!slug) return;
 
-  if (loading)
+    // ✅ Prefer existing tour from store
+    const cachedTour = tours?.find((t) => t.slug === slug);
+
+    if (cachedTour) {
+      setCurrentTour(cachedTour);
+      fetchReviews(cachedTour._id);
+    } else {
+      // fallback if direct URL
+      fetchTour(slug).then((freshTour) => {
+        if (freshTour?._id) fetchReviews(freshTour._id);
+      });
+    }
+  }, [slug, tours, fetchTour, fetchReviews, setCurrentTour]);
+
+  if (tourLoading || reviewLoading)
     return (
       <VStack py={20}>
         <Spinner size="xl" color="teal.400" />
@@ -70,7 +81,6 @@ export default function TourDetail() {
 
   if (!tour) return <Text textAlign="center">Tour not found.</Text>;
 
-  // Small helpers for info boxes
   const InfoBox = ({ icon, color, title, value }) => (
     <Box
       bg={cardBg}
@@ -108,7 +118,7 @@ export default function TourDetail() {
       {/* HEADER IMAGE */}
       <Box position="relative" h={['300px', '400px', '500px']}>
         <Image
-          src={`/img/tours/${tour.imageCover}`}
+          src={tour.imageCover}
           alt={tour.name}
           w="100%"
           h="100%"
@@ -124,7 +134,7 @@ export default function TourDetail() {
           color="white"
           spacing={3}
         >
-          <Heading size="2xl">{tour.name}</Heading>{' '}
+          <Heading size="2xl">{tour.name}</Heading>
           <HStack spacing={6} fontWeight="medium">
             <HStack>
               <FiClock />
@@ -138,12 +148,10 @@ export default function TourDetail() {
         </VStack>
       </Box>
 
-      {/* MAIN GRID */}
       <Container maxW="7xl" py={12}>
         <Grid templateColumns={['1fr', null, '2fr 1fr']} gap={10}>
-          {/* LEFT SECTION */}
           <GridItem>
-            {/* About Section */}
+            {/* About */}
             <Box bg={cardBg} boxShadow="sm" borderRadius="lg" p={8} mb={8}>
               <Heading fontSize="xl" mb={3}>
                 About This Tour
@@ -178,7 +186,7 @@ export default function TourDetail() {
               />
             </SimpleGrid>
 
-            {/* Tour Highlights */}
+            {/* Highlights */}
             <Box bg={cardBg} boxShadow="sm" borderRadius="lg" p={8} mb={8}>
               <Heading fontSize="xl" mb={4}>
                 Tour Highlights
@@ -243,11 +251,17 @@ export default function TourDetail() {
               {tour.images?.map((img, i) => (
                 <Image
                   key={img}
-                  src={`/img/tours/${img}`}
+                  src={img}
                   alt={`${tour.name}-${i}`}
+                  w="100%" // full width per grid cell
+                  h="210px" // fixed height for uniform layout
+                  objectFit="cover" // crops and centers image nicely
                   borderRadius="lg"
                   shadow="md"
-                  _hover={{ transform: 'scale(1.03)', transition: '0.3s' }}
+                  _hover={{
+                    transform: 'scale(1.03)',
+                    transition: 'transform 0.3s ease',
+                  }}
                 />
               ))}
             </SimpleGrid>
@@ -285,7 +299,7 @@ export default function TourDetail() {
             </Box>
           </GridItem>
 
-          {/* RIGHT SECTION - Booking Box */}
+          {/* Booking Sidebar */}
           <GridItem>
             <Box
               position="sticky"
@@ -310,7 +324,6 @@ export default function TourDetail() {
               <Text mt={6} fontWeight="semibold">
                 Select Start Date
               </Text>
-
               <VStack mt={4} spacing={3} align="stretch">
                 {tour.startDates?.map((date) => {
                   const formatted = new Date(date).toLocaleDateString('en-US', {

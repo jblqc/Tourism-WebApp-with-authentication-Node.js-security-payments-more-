@@ -1,0 +1,110 @@
+[
+  {
+    "_id": "e3078f9b351a47738f10c65f",
+    "name": "User 1",
+    "email": "user1@example.com",
+    "photo": "user-1.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "443b5725ced64cd89e4083c7",
+    "name": "User 2",
+    "email": "user2@example.com",
+    "photo": "user-2.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "bf95c1d76bf14514847fb4a2",
+    "name": "User 3",
+    "email": "user3@example.com",
+    "photo": "user-3.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "92201deea69d4fcb8dbae1f7",
+    "name": "User 4",
+    "email": "user4@example.com",
+    "photo": "user-4.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "fcf437f20d1a47bf8565484a",
+    "name": "User 5",
+    "email": "user5@example.com",
+    "photo": "user-5.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "601fa0209b9a4a39973f2ba4",
+    "name": "User 6",
+    "email": "user6@example.com",
+    "photo": "user-6.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "583eaf8333ac4afdbe805f2d",
+    "name": "User 7",
+    "email": "user7@example.com",
+    "photo": "user-7.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "05c226c85e1d420085594f30",
+    "name": "User 8",
+    "email": "user8@example.com",
+    "photo": "user-8.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "f318d8eceb0c423c8b7b3d5c",
+    "name": "User 9",
+    "email": "user9@example.com",
+    "photo": "user-9.jpg",
+    "role": "user",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "6b3393cdb91d4d668dd3af09",
+    "name": "User 10",
+    "email": "user10@example.com",
+    "photo": "user-10.jpg",
+    "role": "lead-guide",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "b7c5f514192a4ed495457714",
+    "name": "User 11",
+    "email": "user11@example.com",
+    "photo": "user-11.jpg",
+    "role": "guide",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  },
+  {
+    "_id": "e3ea62727bbf4e08a64631e4",
+    "name": "User 12",
+    "email": "user12@example.com",
+    "photo": "user-12.jpg",
+    "role": "guide",
+    "password": "$2b$12$gjK96OXdjLAypAvUy4yV2eCtUJOFkFrypA.Cy/GyAGmEIsqSZjtnW",
+    "active": true
+  }
+]

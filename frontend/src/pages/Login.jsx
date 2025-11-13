@@ -1,193 +1,305 @@
+// src/pages/AuthPage.jsx
 import {
   Box,
-  Button,
-  FormControl,
-  FormLabel,
-  Input,
+  Grid,
+  GridItem,
   VStack,
   Heading,
-  Text,
-  useToast,
-  Container,
   Flex,
-  FormErrorMessage,
-  useColorModeValue,
+  Text,
+  Button,
+  HStack,
+  Input,
   InputGroup,
   InputRightElement,
   IconButton,
+  Divider,
+  useColorModeValue,
 } from '@chakra-ui/react';
-import { FiEye, FiEyeOff } from 'react-icons/fi';
+import {
+  FiEye,
+  FiEyeOff,
+  FiArrowLeft,
+  FiArrowRight,
+  FiHeart,
+} from 'react-icons/fi';
 import { useState } from 'react';
-import { login } from '../api/authApi';
-import Alert from '../components/Alert';
 
-export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [alert, setAlert] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [showPassword, setShowPassword] = useState(false);
-  const toast = useToast();
+export default function AuthPage() {
+  const [isLogin, setIsLogin] = useState(true);
+  const [showPass, setShowPass] = useState(false);
+  const [bgIndex, setBgIndex] = useState(1);
+  const bg = useColorModeValue('gray.50', 'gray.900');
 
-  // ✅ Simple validation logic
-  const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  const isValidPassword = password.length >= 8;
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!isValidEmail || !isValidPassword) {
-      toast({
-        title: 'Invalid input',
-        description:
-          !isValidEmail
-            ? 'Please enter a valid email address.'
-            : 'Password must be at least 8 characters long.',
-        status: 'warning',
-        duration: 3000,
-        isClosable: true,
-      });
-      return;
-    }
-
-    setLoading(true);
-    try {
-      await login(email, password);
-      setAlert({ type: 'success', message: 'Logged in successfully!' });
-      toast({
-        title: 'Welcome back!',
-        description: 'Redirecting to home...',
-        status: 'success',
-        duration: 2000,
-        isClosable: true,
-      });
-      setTimeout(() => (window.location = '/'), 1200);
-    } catch (err) {
-      setAlert({
-        type: 'error',
-        message: err.response?.data?.message || 'Login failed',
-      });
-      toast({
-        title: 'Login failed',
-        description: err.response?.data?.message || 'Invalid credentials',
-        status: 'error',
-        duration: 3000,
-        isClosable: true,
-      });
-    } finally {
-      setLoading(false);
-    }
+  const toggleBg = (dir) => {
+    setBgIndex((prev) => {
+      const next = dir === 'next' ? prev + 1 : prev - 1;
+      if (next > 3) return 1;
+      if (next < 1) return 3;
+      return next;
+    });
   };
-
-  const cardBg = useColorModeValue('whiteAlpha.900', 'gray.800');
-  const inputBg = useColorModeValue('white', 'gray.700');
 
   return (
     <Flex
       minH="100vh"
+      bgGradient="linear(to-br, teal.500, green.400)" // or solid bg
       align="center"
       justify="center"
-      bgGradient="linear(to-br, teal.500, green.400)"
-      px={4}
+      p={8} // space from edges of viewport
     >
-      <Container
-        maxW="md"
-        bg={cardBg}
+      <Grid
+        templateColumns={['1fr', null, '1fr 1fr']}
+        h="80vh"
+        w={['95%', '85%', '80%', '70%']} // responsive width
+        bg="white"
+        borderRadius="3xl" // use 3xl instead of full for smoother corners
+        overflow="hidden" // ensures inner elements don’t spill
         boxShadow="2xl"
-        borderRadius="2xl"
-        p={10}
-        backdropFilter="blur(8px)"
       >
-        <VStack as="form" spacing={6} onSubmit={handleSubmit}>
-          <Heading size="lg" textAlign="center" color="teal.600">
-            Log into your account
-          </Heading>
-          <Text fontSize="sm" color="gray.500" textAlign="center">
-            Enter your credentials to access your dashboard
-          </Text>
+        {/* LEFT PANEL */}
+        <GridItem
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          p={[6, 10]}
+        >
+          <VStack spacing={8} align="stretch" w="full" maxW="sm">
+            <Box textAlign="center">
+              <Heading fontFamily="Playfair Display" mb={2}>
+                Travel Voyanix
+              </Heading>
+              <Text color="gray.500" fontSize="sm">
+                Explore More. Experience Life.
+              </Text>
+            </Box>
 
-          {/* EMAIL */}
-          <FormControl id="email" isRequired isInvalid={email && !isValidEmail}>
-            <FormLabel>Email address</FormLabel>
-            <Input
-              type="email"
-              placeholder="you@example.com"
-              bg={inputBg}
-              size="lg"
-              borderRadius="lg"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              borderColor={email && !isValidEmail ? 'red.400' : 'gray.200'}
-              _focus={{
-                borderColor: isValidEmail ? 'teal.400' : 'red.400',
-                boxShadow: '0 0 0 1px teal.300',
-              }}
-            />
-            {!isValidEmail && email && (
-              <FormErrorMessage>Enter a valid email address.</FormErrorMessage>
-            )}
-          </FormControl>
+            {/* Toggle */}
+            <HStack
+              justify="center"
+              bg={useColorModeValue('gray.100', 'gray.700')}
+              borderRadius="full"
+              p={1.5}
+              boxShadow="inset 4px 4px 8px rgba(0,0,0,0.1), inset -4px -4px 8px rgba(255,255,255,0.6)"
+            >
+              <Button
+                flex="1"
+                borderRadius="full"
+                bg={isLogin ? 'white' : 'transparent'}
+                boxShadow={isLogin ? 'md' : 'none'}
+                onClick={() => setIsLogin(true)}
+              >
+                Login
+              </Button>
+              <Button
+                flex="1"
+                borderRadius="full"
+                bg={!isLogin ? 'white' : 'transparent'}
+                boxShadow={!isLogin ? 'md' : 'none'}
+                onClick={() => setIsLogin(false)}
+              >
+                Sign Up
+              </Button>
+            </HStack>
 
-          {/* PASSWORD */}
-          <FormControl
-            id="password"
-            isRequired
-            isInvalid={password && !isValidPassword}
-          >
-            <FormLabel>Password</FormLabel>
-            <InputGroup size="lg">
-              <Input
-                type={showPassword ? 'text' : 'password'}
-                placeholder="••••••••"
-                bg={inputBg}
-                borderRadius="lg"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                borderColor={password && !isValidPassword ? 'red.400' : 'gray.200'}
-                _focus={{
-                  borderColor: isValidPassword ? 'teal.400' : 'red.400',
-                  boxShadow: '0 0 0 1px teal.300',
-                }}
-              />
-              <InputRightElement>
-                <IconButton
-                  variant="ghost"
-                  size="sm"
-                  aria-label="Show password"
-                  icon={showPassword ? <FiEyeOff /> : <FiEye />}
-                  onClick={() => setShowPassword(!showPassword)}
+            {/* Form content */}
+            {isLogin ? (
+              <VStack align="stretch" spacing={5}>
+                <Heading size="md" textAlign="center">
+                  Journey Begins
+                </Heading>
+                <Text fontSize="sm" color="gray.500" textAlign="center">
+                  Choose a login method:
+                </Text>
+
+                <HStack spacing={3} justify="center">
+                  <Button
+                    leftIcon={
+                      <img src="/img/icons/google.svg" alt="" width={18} />
+                    }
+                    variant="outline"
+                  >
+                    Gmail
+                  </Button>
+                  <Button variant="outline">Email Code</Button>
+                  <Button variant="outline">SMS Code</Button>
+                </HStack>
+
+                <HStack my={2}>
+                  <Divider />
+                  <Text fontSize="sm" color="gray.400">
+                    or
+                  </Text>
+                  <Divider />
+                </HStack>
+
+                <Input
+                  placeholder="Email address"
+                  size="lg"
+                  borderRadius="lg"
                 />
-              </InputRightElement>
-            </InputGroup>
-            {!isValidPassword && password && (
-              <FormErrorMessage>
-                Password must be at least 8 characters.
-              </FormErrorMessage>
+                <InputGroup size="lg">
+                  <Input
+                    placeholder="Password"
+                    type={showPass ? 'text' : 'password'}
+                    borderRadius="lg"
+                  />
+                  <InputRightElement>
+                    <IconButton
+                      variant="ghost"
+                      icon={showPass ? <FiEyeOff /> : <FiEye />}
+                      onClick={() => setShowPass(!showPass)}
+                    />
+                  </InputRightElement>
+                </InputGroup>
+                <Text
+                  fontSize="sm"
+                  color="teal.500"
+                  textAlign="right"
+                  cursor="pointer"
+                >
+                  Forgot Password?
+                </Text>
+                <Button colorScheme="teal" size="lg" borderRadius="lg">
+                  Log In
+                </Button>
+              </VStack>
+            ) : (
+              <VStack align="stretch" spacing={5}>
+                <Heading size="md" textAlign="center">
+                  Create Your Account
+                </Heading>
+                <Input placeholder="Full Name" size="lg" borderRadius="lg" />
+                <Input
+                  placeholder="Email address"
+                  size="lg"
+                  borderRadius="lg"
+                />
+                <InputGroup size="lg">
+                  <Input
+                    placeholder="Password"
+                    type={showPass ? 'text' : 'password'}
+                    borderRadius="lg"
+                  />
+                  <InputRightElement>
+                    <IconButton
+                      variant="ghost"
+                      icon={showPass ? <FiEyeOff /> : <FiEye />}
+                      onClick={() => setShowPass(!showPass)}
+                    />
+                  </InputRightElement>
+                </InputGroup>
+                <Button colorScheme="teal" size="lg" borderRadius="lg">
+                  Sign Up
+                </Button>
+              </VStack>
             )}
-          </FormControl>
+          </VStack>
+        </GridItem>
 
-          {/* SUBMIT */}
-          <Button
-            type="submit"
-            colorScheme="teal"
-            size="lg"
-            width="full"
-            isLoading={loading}
-            loadingText="Logging in..."
-            borderRadius="lg"
+        {/* RIGHT PANEL */}
+        <GridItem
+          position="relative"
+          overflow="hidden"
+          bg={`url(/img/lbg-${bgIndex}.jpg) center/cover no-repeat`}
+          clipPath="path('M0,0 h100% v100% q-30,0 -60,30 t-60,60 v-100% h-100% z')" // decorative shape
+        >
+          {/* Overlay text box */}
+          <Box
+            position="absolute"
+            top="6"
+            right="20" // ✅ stick to rightmost edge
+            transform="translateX(22%)" // small visual push out for balance
           >
-            Login
-          </Button>
+            <Box
+              position="relative"
+              bg="white"
+              p={6}
+              borderRadius="2xl"
+              shadow="xl"
+              w="260px"
+              clipPath="path('M0 0 h240 a8 10 40 40 1 40 20 v60 a20 20 0 0 1 -20 20 h-240 a20 20 0 0 1 -20 -20 v-60 a20 20 0 0 1 20 -20 z M240 40 a20 20 0 1 0 0.01 0')"
+              // 👆 creates the inverted circle notch on the right edge
+            >
+              {/* soft faded layer behind */}
+              <Box
+                position="absolute"
+                inset="0"
+                borderRadius="2xl"
+                bg="whiteAlpha.400"
+                transform="translate(8px,8px)"
+                zIndex={-1}
+                filter="blur(3px)"
+              />
 
-          {alert && (
-            <Alert
-              type={alert.type}
-              message={alert.message}
-              onClose={() => setAlert(null)}
+              <Heading fontSize="md" mb={2}>
+                Wander, Explore, Experience.
+              </Heading>
+              <Text fontSize="sm" color="gray.600">
+                Discover new places, embrace adventures, & create unforgettable
+                travel memories worldwide.
+              </Text>
+
+              {/* Heart circle overlay */}
+              <Box
+                position="absolute"
+                top="50%"
+                right="-25px" // ✅ perfectly overlaps the notch
+                transform="translateY(-50%)"
+                bg="white"
+                borderRadius="full"
+                p="3"
+                shadow="md"
+                display="flex"
+                alignItems="center"
+                justifyContent="center"
+              >
+                <FiHeart color="red" />
+              </Box>
+            </Box>
+          </Box>
+
+          {/* Bottom-right quote */}
+          <Box
+            position="absolute"
+            bottom="10"
+            right="10"
+            color="white"
+            textAlign="right"
+          >
+            <Heading fontSize="xl" mb={3}>
+              Escape the Ordinary, <br />
+              Embrace the Journey!
+            </Heading>
+            <Box
+              bg="rgba(255,255,255,0.15)"
+              borderRadius="xl"
+              px={5}
+              py={2}
+              backdropFilter="blur(10px)"
+              fontSize="sm"
+            >
+              Experience the world your way
+            </Box>
+          </Box>
+
+          {/* Left/right arrows */}
+          <HStack position="absolute" bottom="8" left="8" spacing={4}>
+            <IconButton
+              icon={<FiArrowLeft />}
+              variant="ghost"
+              color="white"
+              onClick={() => toggleBg('prev')}
             />
-          )}
-        </VStack>
-      </Container>
+            <IconButton
+              icon={<FiArrowRight />}
+              variant="ghost"
+              color="white"
+              onClick={() => toggleBg('next')}
+            />
+          </HStack>
+        </GridItem>
+      </Grid>
     </Flex>
   );
 }

@@ -10,16 +10,31 @@ import {
 } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import GlassBox from './GlassBox';
 
 export default function Header() {
   const { user, logout } = useAuth?.() || { user: null, logout: null };
 
   return (
-    <Box bg="teal.500" px={8} py={4} color="white" boxShadow="md" position="sticky" top="0" zIndex="10">
+    <Box
+      bg="WHITE"
+      px={8}
+      py={4}
+      color="black"
+      boxShadow="md"
+      position="sticky"
+      top="0"
+      zIndex="100"
+    >
       <Flex align="center">
         {/* Left nav */}
         <HStack spacing={6}>
-          <ChakraLink as={Link} to="/" fontWeight="medium" _hover={{ textDecoration: 'none', color: 'teal.100' }}>
+          <ChakraLink
+            as={Link}
+            to="/"
+            fontWeight="medium"
+            _hover={{ textDecoration: 'none', color: 'blue.200' }}
+          >
             All Tours
           </ChakraLink>
         </HStack>
@@ -69,7 +84,7 @@ export default function Header() {
                 as={Link}
                 to="/login"
                 size="sm"
-                colorScheme="whiteAlpha"
+                colorScheme=""
                 variant="outline"
               >
                 Log in
@@ -78,10 +93,8 @@ export default function Header() {
                 as={Link}
                 to="/signup"
                 size="sm"
-                colorScheme="teal"
                 bg="white"
-                color="teal.500"
-                _hover={{ bg: 'teal.100' }}
+                _hover={{ bg: 'blue.200' }}
               >
                 Sign up
               </Button>

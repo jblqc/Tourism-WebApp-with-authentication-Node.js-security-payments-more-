@@ -25,7 +25,6 @@ export default function ReviewCard({ review }) {
   const starColor = useColorModeValue('yellow.400', 'yellow.300');
   const textColor = useColorModeValue('gray.700', 'gray.200');
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const MotionBox = motion(Box);
 
   return (
@@ -43,7 +42,6 @@ export default function ReviewCard({ review }) {
         transition="0.2s"
       >
         <HStack w="100%" align="center" justify="space-between" spacing={6}>
-          {/* LEFT: Avatar + name + date + review text (short preview) */}
           <HStack spacing={4} flex="1">
             <Avatar
               src={`/img/users/${review.user.photo}`}
@@ -63,7 +61,6 @@ export default function ReviewCard({ review }) {
               </Text>
             </VStack>
 
-            {/* Short review text preview */}
             <Text
               fontSize="md"
               color={textColor}
@@ -76,7 +73,7 @@ export default function ReviewCard({ review }) {
             </Text>
           </HStack>
 
-          {/* RIGHT: Stars */}
+          {/* Stars */}
           <HStack spacing={1} minW="120px" justify="flex-end">
             {[1, 2, 3, 4, 5].map((star) => (
               <Icon
@@ -93,13 +90,7 @@ export default function ReviewCard({ review }) {
       <Divider />
 
       {/* Expanded Modal */}
-      <Modal
-        isOpen={isOpen}
-        onClose={onClose}
-        size="lg"
-        isCentered
-        motionPreset="scale"
-      >
+      <Modal isOpen={isOpen} onClose={onClose} size="lg" isCentered>
         <ModalOverlay />
         <ModalContent borderRadius="xl" overflow="hidden">
           <ModalHeader bg="teal.500" color="white">

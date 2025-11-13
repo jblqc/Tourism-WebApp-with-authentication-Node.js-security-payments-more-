@@ -1,0 +1,2014 @@
+[
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c2955"
+    },
+    "name": "The Sea Explorer",
+    "duration": 7,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "price": 497,
+    "summary": "Exploring the jaw-dropping US east coast by foot and by boat",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "tour-2-cover.jpg",
+    "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-06-19T09:00:00.000Z"
+      },
+      {
+        "$date": "2021-07-20T09:00:00.000Z"
+      },
+      {
+        "$date": "2021-08-18T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-80.185942, 25.774772],
+      "address": "301 Biscayne Blvd, Miami, FL 33132, USA",
+      "description": "Miami, USA"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-80.128473, 25.781842],
+        "description": "Lummus Park Beach",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2959"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-80.647885, 24.909047],
+        "description": "Islamorada",
+        "day": 2,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2958"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-81.0784, 24.707496],
+        "description": "Sombrero Beach",
+        "day": 3,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2957"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-81.768719, 24.552242],
+        "description": "West Key",
+        "day": 5,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2956"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a22c62f8fb814b56fa18b"
+      },
+      {
+        "$oid": "5c8a1f4e2f8fb814b56fa185"
+      }
+    ],
+    "slug": "the-sea-explorer",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c2961"
+    },
+    "name": "The Park Camper",
+    "duration": 10,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 7,
+    "price": 1497,
+    "summary": "Breathing in Nature in America's most spectacular National Parks",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!",
+    "imageCover": "tour-5-cover.jpg",
+    "images": ["tour-5-1.jpg", "tour-5-2.jpg", "tour-5-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-08-05T09:00:00.000Z"
+      },
+      {
+        "$date": "2022-03-20T10:00:00.000Z"
+      },
+      {
+        "$date": "2022-08-12T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-115.172652, 36.110904],
+      "address": "3663 S Las Vegas Blvd, Las Vegas, NV 89109, USA",
+      "description": "Las Vegas, USA"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-112.987418, 37.198125],
+        "description": "Zion Canyon National Park",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2965"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-111.376161, 36.86438],
+        "description": "Antelope Canyon",
+        "day": 4,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2964"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-112.115763, 36.058973],
+        "description": "Grand Canyon National Park",
+        "day": 5,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2963"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-116.107963, 34.011646],
+        "description": "Joshua Tree National Park",
+        "day": 9,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2962"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21f22f8fb814b56fa18a"
+      },
+      {
+        "$oid": "5c8a23412f8fb814b56fa18c"
+      },
+      {
+        "$oid": "5c8a201e2f8fb814b56fa186"
+      }
+    ],
+    "slug": "the-park-camper",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c295d"
+    },
+    "name": "The City Wanderer",
+    "duration": 9,
+    "maxGroupSize": 20,
+    "difficulty": "easy",
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 5,
+    "price": 1197,
+    "summary": "Living the life of Wanderlust in the US' most beatiful cities",
+    "description": "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat lorem ipsum dolor sit amet.\nConsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat!",
+    "imageCover": "tour-4-cover.jpg",
+    "images": ["tour-4-1.jpg", "tour-4-2.jpg", "tour-4-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-03-11T10:00:00.000Z"
+      },
+      {
+        "$date": "2021-05-02T09:00:00.000Z"
+      },
+      {
+        "$date": "2021-06-09T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-73.985141, 40.75894],
+      "address": "Manhattan, NY 10036, USA",
+      "description": "NYC, USA"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-73.967696, 40.781821],
+        "description": "New York",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2960"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-118.324396, 34.097984],
+        "description": "Los Angeles",
+        "day": 3,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c295f"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-122.408865, 37.787825],
+        "description": "San Francisco",
+        "day": 5,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c295e"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a22c62f8fb814b56fa18b"
+      },
+      {
+        "$oid": "5c8a201e2f8fb814b56fa186"
+      }
+    ],
+    "slug": "the-city-wanderer",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c2966"
+    },
+    "name": "The Sports Lover",
+    "duration": 14,
+    "maxGroupSize": 8,
+    "difficulty": "difficult",
+    "ratingsAverage": 3.9,
+    "ratingsQuantity": 7,
+    "price": 2997,
+    "summary": "Surfing, skating, parajumping, rock climbing and more, all in one tour",
+    "description": "Nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\nVoluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur!",
+    "imageCover": "tour-6-cover.jpg",
+    "images": ["tour-6-1.jpg", "tour-6-2.jpg", "tour-6-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-07-19T09:00:00.000Z"
+      },
+      {
+        "$date": "2021-09-06T09:00:00.000Z"
+      },
+      {
+        "$date": "2022-03-18T10:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-118.803461, 34.006072],
+      "address": "29130 Cliffside Dr, Malibu, CA 90265, USA",
+      "description": "California, USA"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-118.809361, 34.003098],
+        "description": "Point Dume Beach",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c296b"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-118.47549, 33.987367],
+        "description": "Venice Skate Park",
+        "day": 4,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c296a"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-116.830104, 33.022843],
+        "description": "San Diego Skydive",
+        "day": 6,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2969"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-118.4547, 35.710359],
+        "description": "Kern River Rafting",
+        "day": 7,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2968"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-119.600492, 37.742371],
+        "description": "Yosemite National Park",
+        "day": 10,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2967"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21f22f8fb814b56fa18a"
+      },
+      {
+        "$oid": "5c8a1f292f8fb814b56fa184"
+      },
+      {
+        "$oid": "5c8a1f4e2f8fb814b56fa185"
+      }
+    ],
+    "slug": "the-sports-lover",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c2970"
+    },
+    "name": "The Star Gazer",
+    "duration": 9,
+    "maxGroupSize": 8,
+    "difficulty": "medium",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "price": 2997,
+    "summary": "The most remote and stunningly beautiful places for seeing the night sky",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "imageCover": "tour-8-cover.jpg",
+    "images": ["tour-8-1.jpg", "tour-8-2.jpg", "tour-8-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-03-23T10:00:00.000Z"
+      },
+      {
+        "$date": "2021-10-25T09:00:00.000Z"
+      },
+      {
+        "$date": "2022-01-30T10:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-109.55099, 37.283469],
+      "address": "Bluff, UT 84512, USA",
+      "description": "Utah, USA"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-109.99953, 37.629017],
+        "description": "Natural Bridges National Monument",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2973"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-111.50954, 36.883269],
+        "description": "Horseshoe Bend",
+        "day": 3,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2972"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-117.07399, 36.501435],
+        "description": "Death Valley National Park",
+        "day": 6,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2971"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21d02f8fb814b56fa189"
+      },
+      {
+        "$oid": "5c8a1f292f8fb814b56fa184"
+      }
+    ],
+    "slug": "the-star-gazer",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c2974"
+    },
+    "name": "The Northern Lights",
+    "duration": 3,
+    "maxGroupSize": 12,
+    "difficulty": "easy",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 7,
+    "price": 1497,
+    "summary": "Enjoy the Northern Lights in one of the best places in the world",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "imageCover": "tour-9-cover.jpg",
+    "images": ["tour-9-1.jpg", "tour-9-2.jpg", "tour-9-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-12-16T10:00:00.000Z"
+      },
+      {
+        "$date": "2022-01-16T10:00:00.000Z"
+      },
+      {
+        "$date": "2022-12-12T10:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-114.406097, 62.439943],
+      "address": "Yellowknife, NT X1A 2L2, Canada",
+      "description": "Yellowknife, CAN"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-114.406097, 62.439943],
+        "description": "Yellowknife",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2975"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21f22f8fb814b56fa18a"
+      },
+      {
+        "$oid": "5c8a201e2f8fb814b56fa186"
+      },
+      {
+        "$oid": "5c8a23412f8fb814b56fa18c"
+      }
+    ],
+    "slug": "the-northern-lights",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c296c"
+    },
+    "name": "The Wine Taster",
+    "duration": 5,
+    "maxGroupSize": 8,
+    "difficulty": "easy",
+    "ratingsAverage": 4.4,
+    "ratingsQuantity": 7,
+    "price": 1997,
+    "summary": "Exquisite wines, scenic views, exclusive barrel tastings,  and much more",
+    "description": "Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\nIrure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "imageCover": "tour-7-cover.jpg",
+    "images": ["tour-7-1.jpg", "tour-7-2.jpg", "tour-7-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-02-12T10:00:00.000Z"
+      },
+      {
+        "$date": "2021-04-14T09:00:00.000Z"
+      },
+      {
+        "$date": "2021-09-01T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-122.29286, 38.294065],
+      "address": "560 Jefferson St, Napa, CA 94559, USA",
+      "description": "California, USA"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-122.479887, 38.510312],
+        "description": "Beringer Vineyards",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c296f"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-122.582948, 38.585707],
+        "description": "Clos Pegase Winery & Tasting Room",
+        "day": 3,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c296e"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-122.434697, 38.482181],
+        "description": "Raymond Vineyard and Cellar",
+        "day": 5,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c296d"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a22c62f8fb814b56fa18b"
+      },
+      {
+        "$oid": "5c8a23412f8fb814b56fa18c"
+      }
+    ],
+    "slug": "the-wine-taster",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c295a"
+    },
+    "name": "The Snow Adventurer",
+    "duration": 4,
+    "maxGroupSize": 10,
+    "difficulty": "difficult",
+    "ratingsAverage": 4.5,
+    "ratingsQuantity": 6,
+    "price": 997,
+    "summary": "Exciting adventure in the snow with snowboarding and skiing",
+    "description": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum!\nDolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur, exercitation ullamco laboris nisi ut aliquip. Lorem ipsum dolor sit amet, consectetur adipisicing elit!",
+    "imageCover": "tour-3-cover.jpg",
+    "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2022-01-05T10:00:00.000Z"
+      },
+      {
+        "$date": "2022-02-12T10:00:00.000Z"
+      },
+      {
+        "$date": "2023-01-06T10:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-106.822318, 39.190872],
+      "address": "419 S Mill St, Aspen, CO 81611, USA",
+      "description": "Aspen, USA"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-106.855385, 39.182677],
+        "description": "Aspen Highlands",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c295c"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-106.516623, 39.60499],
+        "description": "Beaver Creek",
+        "day": 2,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c295b"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21d02f8fb814b56fa189"
+      },
+      {
+        "$oid": "5c8a23412f8fb814b56fa18c"
+      },
+      {
+        "$oid": "5c8a1f4e2f8fb814b56fa185"
+      }
+    ],
+    "slug": "the-snow-adventurer",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "5c88fa8cf4afda39709c2951"
+    },
+    "name": "The Forest Hiker",
+    "duration": 5,
+    "maxGroupSize": 25,
+    "difficulty": "easy",
+    "ratingsAverage": 5,
+    "ratingsQuantity": 9,
+    "price": 397,
+    "summary": "Breathtaking hike through the Canadian Banff National Park",
+    "description": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "imageCover": "tour-1-cover.jpg",
+    "images": ["tour-1-1.jpg", "tour-1-2.jpg", "tour-1-3.jpg"],
+    "startDates": [
+      {
+        "$date": "2021-04-25T09:00:00.000Z"
+      },
+      {
+        "$date": "2021-07-20T09:00:00.000Z"
+      },
+      {
+        "$date": "2021-10-05T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-10-28T12:06:58.417Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-115.570154, 51.178456],
+      "address": "224 Banff Ave, Banff, AB, Canada",
+      "description": "Banff, CAN"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-116.214531, 51.417611],
+        "description": "Banff National Park",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2954"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-118.076152, 52.875223],
+        "description": "Jasper National Park",
+        "day": 3,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2953"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-117.490309, 51.261937],
+        "description": "Glacier National Park of Canada",
+        "day": 5,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2952"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21d02f8fb814b56fa189"
+      },
+      {
+        "$oid": "5c8a201e2f8fb814b56fa186"
+      },
+      {
+        "$oid": "5c8a1f292f8fb814b56fa184"
+      }
+    ],
+    "slug": "the-forest-hiker",
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "690957baba1538ebbf1ff477"
+    },
+    "name": "Islands of the Philippines Adventure",
+    "duration": 7,
+    "maxGroupSize": 12,
+    "difficulty": "medium",
+    "ratingsAverage": 5,
+    "ratingsQuantity": 3,
+    "price": 4200,
+    "summary": "A 7-day island-hopping adventure across Palawan, Cebu, and Bohol — crystal lagoons, limestone cliffs, whale sharks, and chocolate hills await.",
+    "description": "This unforgettable 7-day Philippine adventure takes you through some of the country’s most stunning natural wonders. Starting in Palawan, explore the world-famous limestone cliffs and hidden lagoons of El Nido by boat. Continue to Cebu to swim with whale sharks and discover cascading turquoise waterfalls. Finish in Bohol, home to the iconic Chocolate Hills and the adorable tarsiers. The tour blends scenic boat rides, tropical hikes, and cultural visits, perfect for explorers and photographers alike.",
+    "startDates": [
+      {
+        "$date": "2025-12-15T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-01-20T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-02-10T09:00:00.000Z"
+      }
+    ],
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [118.7376, 9.7421],
+      "address": "Puerto Princesa City, Palawan, Philippines",
+      "description": "Puerto Princesa, Palawan"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [118.7376, 9.7421],
+        "description": "Puerto Princesa Underground River – a UNESCO World Heritage Site",
+        "day": 1,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2959"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [119.394, 11.2028],
+        "description": "El Nido lagoons and limestone cliffs",
+        "day": 2,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2958"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [120.0027, 9.5244],
+        "description": "Cebu – Kawasan Falls and local island hopping",
+        "day": 4,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2957"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [123.8758, 9.908],
+        "description": "Oslob Whale Shark encounter",
+        "day": 5,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2956"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [124.11, 9.8471],
+        "description": "Bohol – Chocolate Hills and Tarsier Sanctuary",
+        "day": 6,
+        "_id": {
+          "$oid": "5c88fa8cf4afda39709c2955"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a22c62f8fb814b56fa18b"
+      },
+      {
+        "$oid": "5c8a1f4e2f8fb814b56fa185"
+      }
+    ],
+    "slug": "islands-of-the-philippines-adventure",
+    "__v": 0,
+    "imageCover": "tour-690957baba1538ebbf1ff477-1762220918877-cover.jpeg",
+    "images": [
+      "tour-690957baba1538ebbf1ff477-1762221317908-1.jpeg",
+      "tour-690957baba1538ebbf1ff477-1762221317973-3.jpeg",
+      "tour-690957baba1538ebbf1ff477-1762221317972-2.jpeg"
+    ],
+    "createdAt": {
+      "$date": "2025-11-04T03:30:00.000Z"
+    }
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00001" },
+    "name": "Boracay Island Beach Escape",
+    "slug": "boracay-island-beach-escape",
+    "duration": 4,
+    "maxGroupSize": 12,
+    "difficulty": "easy",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 112,
+    "price": 349,
+    "summary": "Swim the turquoise waters of White Beach and sail into a fiery Boracay sunset.",
+    "description": "Spend four sun-drenched days exploring Boracay’s famous White Beach, snorkeling at vibrant coral gardens, and sailing on a traditional paraw at golden hour. Sample fresh seafood at D’Mall, hike up Mount Luho for panoramic views, and unwind with a beachside massage.",
+    "imageCover": "https://unsplash.com/photos/a-sandy-beach-with-a-tree-hanging-over-it-a0m7faIKKM0?utm_source=chatgpt",
+    "images": [
+      "https://unsplash.com/photos/a-person-standing-on-a-beach-near-the-ocean-bn57NAYNVWc?utm_source=chatgpt",
+      "https://unsplash.com/photos/a-beach-with-palm-trees-and-people-in-the-water-t7tPFD2fXuQ?utm_source=chatgpt",
+      "https://unsplash.com/photos/people-walking-on-boracay-beach-NR-2_RIb62k?utm_source=chatgpt"
+    ],
+    "startDates": [
+      { "$date": "2026-01-15T09:00:00.000Z" },
+      { "$date": "2026-02-12T09:00:00.000Z" },
+      { "$date": "2026-03-12T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:20:00.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [121.922, 11.9674],
+      "address": "White Beach, Boracay, Malay, Aklan, Philippines",
+      "description": "Boracay, Aklan"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [121.922, 11.9674],
+        "description": "White Beach Station 2",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d01001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [121.9519, 11.9867],
+        "description": "Mount Luho Viewpoint",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d01002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [121.9318, 11.9726],
+        "description": "Coral Garden Snorkel Site",
+        "day": 3,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d01003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a22c62f8fb814b56fa18b" },
+      { "$oid": "5c8a1f4e2f8fb814b56fa185" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00004" },
+    "name": "Bohol Chocolate Hills & Tarsier Daytrip",
+    "slug": "bohol-chocolate-hills-and-tarsier-daytrip",
+    "duration": 2,
+    "maxGroupSize": 18,
+    "difficulty": "easy",
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 73,
+    "price": 189,
+    "summary": "See the iconic Chocolate Hills, visit tarsiers, and cruise the Loboc River.",
+    "description": "An easy-paced exploration of Bohol’s natural icons: the rolling Chocolate Hills, the tiny wide-eyed Philippine tarsier, and a floating lunch along the Loboc River. Optional stop at Baclayon Church for a peek into local history.",
+    "imageCover": "https://unsplash.com/photos/chocolate-hills-philippines-kCNf42AH5RM?utm_source=chatgpt",
+    "images": [
+      "https://unsplash.com/photos/green-trees-on-brown-mountain-under-white-clouds-during-daytime-KpBzR1gJwMY?utm_source=chatgpt",
+      "https://unsplash.com/photos/a-sandy-beach-with-a-tree-hanging-over-it-a0m7faIKKM0?utm_source=chatgpt",
+      "https://unsplash.com/photos/the-sun-shines-through-the-clouds-over-the-hills-85V-8QFpYcM?utm_source=chatgpt"
+    ],
+    "startDates": [
+      { "$date": "2026-01-20T09:00:00.000Z" },
+      { "$date": "2026-02-17T09:00:00.000Z" },
+      { "$date": "2026-03-17T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:20:15.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [124.1422, 9.9195],
+      "address": "Chocolate Hills Complex, Carmen, Bohol, Philippines",
+      "description": "Chocolate Hills Viewpoint"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [124.1422, 9.9195],
+        "description": "Chocolate Hills Complex",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d04001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [124.0338, 9.6399],
+        "description": "Loboc River Cruise",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d04002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [124.0285, 9.6491],
+        "description": "Philippine Tarsier Sanctuary",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d04003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a201e2f8fb814b56fa186" },
+      { "$oid": "5c8a1f292f8fb814b56fa184" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00005" },
+    "name": "Banaue Rice Terraces Heritage Trek",
+    "slug": "banaue-rice-terraces-heritage-trek",
+    "duration": 3,
+    "maxGroupSize": 10,
+    "difficulty": "medium",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 64,
+    "price": 329,
+    "summary": "Walk centuries-old paddies and meet Ifugao communities amid misty mountains.",
+    "description": "Trek along hand-carved amphitheaters of rice, visit local weaving houses, and cool off at Tappiya Falls near Batad. Evenings are cozy in simple homestays with mountain views and warm Ifugao hospitality.",
+    "imageCover": "https://images.unsplash.com/photo-1472227698210-1a3d3e8b016b?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1580795475430-b4654b6ce0a2?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1505236733646-49bd205299e2?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-01-28T09:00:00.000Z" },
+      { "$date": "2026-02-25T09:00:00.000Z" },
+      { "$date": "2026-03-25T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:20:20.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [121.0614, 16.9133],
+      "address": "Banaue Viewpoint, Ifugao, Philippines",
+      "description": "Banaue View Deck"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [121.0614, 16.9133],
+        "description": "Banaue View Deck",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d05001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [121.1103, 16.9317],
+        "description": "Batad Rice Terraces",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d05002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [121.1207, 16.9418],
+        "description": "Tappiya Falls",
+        "day": 3,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d05003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21f22f8fb814b56fa18a" },
+      { "$oid": "5c8a23412f8fb814b56fa18c" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00006" },
+    "name": "Kyoto Temples & Tea Walk",
+    "slug": "kyoto-temples-and-tea-walk",
+    "duration": 3,
+    "maxGroupSize": 14,
+    "difficulty": "easy",
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 210,
+    "price": 449,
+    "summary": "Wander bamboo groves, zen gardens, and sip matcha in Kyoto’s old districts.",
+    "description": "From the orange torii of Fushimi Inari to Arashiyama’s whispering bamboo, Kyoto enchants at every step. Explore Kinkaku-ji’s golden pavilion, learn tea ceremony basics, and stroll Gion’s lantern-lit lanes.",
+    "imageCover": "https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1597070789124-421e1b056bb0?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1559336194-cee1fa1775f7?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1534438327272-0f1f85ece9c6?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-03-14T09:00:00.000Z" },
+      { "$date": "2026-04-11T09:00:00.000Z" },
+      { "$date": "2026-05-09T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:20:25.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [135.7727, 35.0116],
+      "address": "Gion, Kyoto, Japan",
+      "description": "Gion District"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [135.7727, 35.0116],
+        "description": "Gion Walking Tour",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d06001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [135.7788, 35.0037],
+        "description": "Kiyomizu-dera Temple",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d06002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [135.6673, 35.0094],
+        "description": "Arashiyama Bamboo Grove",
+        "day": 3,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d06003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21d02f8fb814b56fa189" },
+      { "$oid": "5c8a1f4e2f8fb814b56fa185" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00007" },
+    "name": "Mount Fuji Lakeside Day Hike",
+    "slug": "mount-fuji-lakeside-day-hike",
+    "duration": 1,
+    "maxGroupSize": 16,
+    "difficulty": "medium",
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 132,
+    "price": 199,
+    "summary": "Circle Kawaguchiko’s lakeside paths with postcard views of Fuji-san.",
+    "description": "A relaxed loop around Lake Kawaguchiko offers shimmering reflections of Mount Fuji, seasonal flowers, and cozy cafés. Optional ascent to Chureito Pagoda for the classic red-pagoda Fuji frame.",
+    "imageCover": "https://images.unsplash.com/photo-1522964975403-519303bba1f3?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1483728642387-6c2683cb21e8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1486071328037-6d8d89822c9f?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-04-18T09:00:00.000Z" },
+      { "$date": "2026-05-16T09:00:00.000Z" },
+      { "$date": "2026-06-13T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:20:30.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [138.7567, 35.517],
+      "address": "Lake Kawaguchiko, Yamanashi, Japan",
+      "description": "Kawaguchiko Station"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [138.7567, 35.517],
+        "description": "Kawaguchiko Lakeside",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d07001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [138.7966, 35.4978],
+        "description": "Chureito Pagoda Viewpoint",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d07002" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21f22f8fb814b56fa18a" },
+      { "$oid": "5c8a23412f8fb814b56fa18c" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6732a001a1a0f2c5a1d00008"
+    },
+    "name": "Bali Ubud Culture & Waterfalls",
+    "slug": "bali-ubud-culture-and-waterfalls",
+    "duration": 4,
+    "maxGroupSize": 18,
+    "difficulty": "easy",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 155,
+    "price": 429,
+    "summary": "Temples, rice terraces, and jungle cascades around tranquil Ubud.",
+    "description": "Visit Tirta Empul’s holy springs, wander Tegallalang’s rice terraces, and cool off at Tegenungan Waterfall. Taste Balinese coffee, learn about local crafts, and relax with a traditional massage.",
+    "imageCover": "https://images.unsplash.com/photo-1572279779752-cc261c5f4c6c?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1560347876-aeef00ee58a1?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1558747449-58a6b433a8dd?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1565446801362-d334832143a1?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      {
+        "$date": "2026-02-20T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-03-20T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-04-17T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-11-12T07:20:35.000Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [115.263, -8.519],
+      "address": "Ubud, Gianyar Regency, Bali, Indonesia",
+      "description": "Central Ubud"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [115.2799, -8.4858],
+        "description": "Tegallalang Rice Terraces",
+        "day": 1,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d08001"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [115.2875, -8.5061],
+        "description": "Tirta Empul Temple",
+        "day": 2,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d08002"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [115.2892, -8.5754],
+        "description": "Tegenungan Waterfall",
+        "day": 3,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d08003"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21d02f8fb814b56fa189"
+      },
+      {
+        "$oid": "5c8a201e2f8fb814b56fa186"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6732a001a1a0f2c5a1d00009"
+    },
+    "name": "Great Barrier Reef Snorkel from Cairns",
+    "slug": "great-barrier-reef-snorkel-from-cairns",
+    "duration": 1,
+    "maxGroupSize": 24,
+    "difficulty": "easy",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 328,
+    "price": 219,
+    "summary": "Full-day catamaran trip to outer reef platforms for pristine snorkeling.",
+    "description": "Sail from Cairns to the outer reef and dive into a kaleidoscope of corals and tropical fish. Beginner-friendly briefings, optional intro scuba, and a relaxed buffet lunch on deck.",
+    "imageCover": "https://images.unsplash.com/photo-1504198453319-5ce911bafcde?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1483728642387-6c2683cb21e8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1526401281625-1043b30d5f3a?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1516972810927-80185027ca84?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      {
+        "$date": "2026-05-06T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-06-03T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-07-01T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-11-12T07:20:40.000Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [145.779, -16.9186],
+      "address": "Cairns Marina, QLD, Australia",
+      "description": "Cairns Reef Fleet Terminal"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [146, -16.6],
+        "description": "Outer Reef Platform",
+        "day": 1,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d09001"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a22c62f8fb814b56fa18b"
+      },
+      {
+        "$oid": "5c8a23412f8fb814b56fa18c"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6732a001a1a0f2c5a1d00003"
+    },
+    "name": "Siargao Surf & Island Life",
+    "slug": "siargao-surf-and-island-life",
+    "duration": 6,
+    "maxGroupSize": 10,
+    "difficulty": "medium",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 98,
+    "price": 579,
+    "summary": "Catch waves at Cloud 9, cruise Sugba Lagoon, and swing by Magpupungko rock pools.",
+    "description": "Siargao blends world-class surf with soft-island living. Practice at Cloud 9’s boardwalk, drift over jade Sugba Lagoon, and time your visit to Magpupungko for low tide to reveal stunning rock pools. Evenings mean mango shakes and chill reggae bars.",
+    "imageCover": "https://images.unsplash.com/photo-1560264280-1b5c76f8f537?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1566613158081-546a9b5b42d8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1542257900-02161ea42707?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1554731680-0e2e3f6f6f36?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      {
+        "$date": "2026-03-10T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-04-07T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-05-05T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-11-12T07:20:10.000Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [126.1652, 9.8488],
+      "address": "Cloud 9 Boardwalk, General Luna, Siargao, Philippines",
+      "description": "Cloud 9 Boardwalk"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [126.1652, 9.8488],
+        "description": "Cloud 9 Surf",
+        "day": 1,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d03001"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [125.9358, 9.8303],
+        "description": "Sugba Lagoon",
+        "day": 2,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d03002"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [126.1103, 9.8161],
+        "description": "Magpupungko Rock Pools",
+        "day": 3,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d03003"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21d02f8fb814b56fa189"
+      },
+      {
+        "$oid": "5c8a23412f8fb814b56fa18c"
+      }
+    ],
+    "__v": 0
+  },
+
+  {
+    "_id": {
+      "$oid": "6732a001a1a0f2c5a1d0000b"
+    },
+    "name": "Santorini Sunset & Caldera Cruise",
+    "slug": "santorini-sunset-and-caldera-cruise",
+    "duration": 2,
+    "maxGroupSize": 18,
+    "difficulty": "easy",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 174,
+    "price": 389,
+    "summary": "Set sail around Santorini’s caldera and watch Oia ignite at dusk.",
+    "description": "Swim in volcanic hot springs, snorkel in clear coves, and savor a Greek BBQ on deck. Cap the day with the island’s legendary sunset from Oia’s cliffside paths.",
+    "imageCover": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1526289034009-0240ddb71f52?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1589298357756-15e2c5a5e76c?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1508614999368-9260051291ea?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-05-21T09:00:00.000Z" },
+      { "$date": "2026-06-18T09:00:00.000Z" },
+      { "$date": "2026-07-16T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:20:50.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [25.4305, 36.3932],
+      "address": "Fira, Santorini, Greece",
+      "description": "Old Port of Fira"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [25.395, 36.404],
+        "description": "Hot Springs (Palea Kameni)",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0b001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [25.375, 36.4623],
+        "description": "Oia Sunset View",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0b002" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21f22f8fb814b56fa18a" },
+      { "$oid": "5c8a23412f8fb814b56fa18c" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d0000c" },
+    "name": "Iceland Golden Circle & Waterfalls",
+    "slug": "iceland-golden-circle-and-waterfalls",
+    "duration": 3,
+    "maxGroupSize": 16,
+    "difficulty": "medium",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 203,
+    "price": 699,
+    "summary": "Witness geysers, rift valleys, and thunderous cascades in South Iceland.",
+    "description": "Stand between continents at Þingvellir, feel the power of Gullfoss, and watch Strokkur burst skyward. Optional glacier walk on Sólheimajökull and a black-sand detour to Reynisfjara.",
+    "imageCover": "https://images.unsplash.com/photo-1604068549290-dea0e4a305ca?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1523987355523-c7b5b84a0e14?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1491557345352-5929e343eb89?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-02-10T09:00:00.000Z" },
+      { "$date": "2026-03-10T09:00:00.000Z" },
+      { "$date": "2026-04-07T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:20:55.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-21.9333, 64.1333],
+      "address": "Reykjavík, Iceland",
+      "description": "Reykjavík City Hall"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-21.125, 64.2559],
+        "description": "Þingvellir National Park",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0c001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-20.3, 64.3275],
+        "description": "Geysir Geothermal Area",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0c002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-20.12, 64.3261],
+        "description": "Gullfoss Waterfall",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0c003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21d02f8fb814b56fa189" },
+      { "$oid": "5c8a1f4e2f8fb814b56fa185" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d0000d" },
+    "name": "Yosemite Valley Granite Trails",
+    "slug": "yosemite-valley-granite-trails",
+    "duration": 3,
+    "maxGroupSize": 12,
+    "difficulty": "medium",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 147,
+    "price": 529,
+    "summary": "Classic hikes with views of Half Dome, El Capitan, and Yosemite Falls.",
+    "description": "Hit Mist Trail to Vernal and Nevada Falls, watch climbers on El Cap, and catch Tunnel View’s iconic panorama. Spring wildflowers or fall colors — Yosemite always puts on a show.",
+    "imageCover": "https://images.unsplash.com/photo-1508264165352-258859e62245?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1483794344563-d27a8d18014e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1500048993953-d23a436266cf?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-04-23T09:00:00.000Z" },
+      { "$date": "2026-05-21T09:00:00.000Z" },
+      { "$date": "2026-06-18T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:21:00.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-119.5383, 37.7485],
+      "address": "Yosemite Valley Visitor Center, CA, USA",
+      "description": "Yosemite Valley"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-119.5586, 37.7326],
+        "description": "Tunnel View",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0d001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-119.5585, 37.7275],
+        "description": "Bridalveil Fall Trail",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0d002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-119.5554, 37.7295],
+        "description": "El Capitan Meadow",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0d003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a22c62f8fb814b56fa18b" },
+      { "$oid": "5c8a201e2f8fb814b56fa186" }
+    ],
+    "__v": 0
+  },
+
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d0000e" },
+    "name": "Swiss Alps Matterhorn Panorama",
+    "slug": "swiss-alps-matterhorn-panorama",
+    "duration": 3,
+    "maxGroupSize": 10,
+    "difficulty": "medium",
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 121,
+    "price": 899,
+    "summary": "Zermatt hikes and Gornergrat railway for mountain vistas of the Matterhorn.",
+    "description": "Ride Europe’s scenic cog railway, stroll the Five Lakes Walk, and photograph the Matterhorn mirrored in Stellisee. Swiss chocolate and fondue to celebrate each summit view.",
+    "imageCover": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1500049836744-11c1af8b7d8e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1508261309751-9b5d8b0c6c76?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1502786129293-79981df4e689?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-06-06T09:00:00.000Z" },
+      { "$date": "2026-07-04T09:00:00.000Z" },
+      { "$date": "2026-08-01T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:21:05.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [7.748, 46.0207],
+      "address": "Zermatt, Valais, Switzerland",
+      "description": "Zermatt Bahnhof"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [7.784, 46.0085],
+        "description": "Gornergrat Station",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0e001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [7.755, 46.019],
+        "description": "Stellisee (Five Lakes Walk)",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0e002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [7.748, 46.0207],
+        "description": "Zermatt Village",
+        "day": 3,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0e003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21f22f8fb814b56fa18a" },
+      { "$oid": "5c8a23412f8fb814b56fa18c" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d0000f" },
+    "name": "New York City Essentials",
+    "slug": "new-york-city-essentials",
+    "duration": 2,
+    "maxGroupSize": 20,
+    "difficulty": "easy",
+    "ratingsAverage": 4.6,
+    "ratingsQuantity": 242,
+    "price": 279,
+    "summary": "From Times Square to Central Park — the best of NYC in two days.",
+    "description": "Walk the High Line, ferry past Lady Liberty, and sample slices in Greenwich Village. Snap skyline shots from Top of the Rock and chill on the Central Park lawns.",
+    "imageCover": "https://images.unsplash.com/photo-1499346030926-9a72daac6c63?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1505196298139-8cfce5d8f3f3?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1534351590666-13e3e96b5017?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-03-06T09:00:00.000Z" },
+      { "$date": "2026-04-03T09:00:00.000Z" },
+      { "$date": "2026-05-01T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:21:10.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-73.9855, 40.758],
+      "address": "Times Square, New York, NY, USA",
+      "description": "Times Square"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-73.9857, 40.7484],
+        "description": "Top of the Rock / Rockefeller Center",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0f001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-74.0445, 40.6892],
+        "description": "Statue of Liberty Ferry",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0f002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-73.9712, 40.7831],
+        "description": "Central Park Stroll",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d0f003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a22c62f8fb814b56fa18b" },
+      { "$oid": "5c8a1f292f8fb814b56fa184" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00010" },
+    "name": "Halong Bay Karst Cruise",
+    "slug": "halong-bay-karst-cruise",
+    "duration": 2,
+    "maxGroupSize": 24,
+    "difficulty": "easy",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 188,
+    "price": 359,
+    "summary": "Sail past limestone pillars, kayak hidden caves, and dine onboard.",
+    "description": "A classic overnight junk boat through Vietnam’s UNESCO-listed bay. Kayak to lagoons, climb to Ti Top Island’s viewpoint, and enjoy sunrise tai chi on deck.",
+    "imageCover": "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1571772996211-2f02c9727629?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1549887534-4a36d1b4b828?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-01-22T09:00:00.000Z" },
+      { "$date": "2026-02-19T09:00:00.000Z" },
+      { "$date": "2026-03-19T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:21:15.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [107.0587, 20.9101],
+      "address": "Hạ Long International Cruise Port, Vietnam",
+      "description": "Halong Bay Marina"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [107.0462, 20.8606],
+        "description": "Sung Sot Cave",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d10001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [107.0448, 20.8487],
+        "description": "Ti Top Island Viewpoint",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d10002" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21f22f8fb814b56fa18a" },
+      { "$oid": "5c8a201e2f8fb814b56fa186" }
+    ],
+    "__v": 0
+  },
+
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00011" },
+    "name": "Cappadocia Balloons & Fairy Chimneys",
+    "slug": "cappadocia-balloons-and-fairy-chimneys",
+    "duration": 3,
+    "maxGroupSize": 16,
+    "difficulty": "easy",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 171,
+    "price": 629,
+    "summary": "Sunrise hot-air balloons, cave hotels, and surreal valleys.",
+    "description": "Drift above honeycombed hills at dawn, explore Göreme Open-Air Museum, and hike the otherworldly Rose and Love Valleys. Evenings in cozy cave-restaurants.",
+    "imageCover": "https://images.unsplash.com/photos/SagXn7H6HFg?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photos/9phk23gEA3M?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photos/XHeBXCQB9ZA?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photos/6Qt4_raxO8k?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-04-05T09:00:00.000Z" },
+      { "$date": "2026-05-03T09:00:00.000Z" },
+      { "$date": "2026-06-07T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:21:20.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [34.853, 38.6431],
+      "address": "Göreme, Nevşehir, Türkiye",
+      "description": "Göreme Town Center"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [34.8444, 38.6405],
+        "description": "Göreme Open-Air Museum",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d11001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [34.8397, 38.6402],
+        "description": "Love Valley Hike",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d11002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [34.846, 38.642],
+        "description": "Sunrise Balloon Launch Area",
+        "day": 3,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d11003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a22c62f8fb814b56fa18b" },
+      { "$oid": "5c8a23412f8fb814b56fa18c" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00012" },
+    "name": "Petra & Wadi Rum Desert Adventure",
+    "slug": "petra-and-wadi-rum-desert-adventure",
+    "duration": 3,
+    "maxGroupSize": 14,
+    "difficulty": "medium",
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 134,
+    "price": 689,
+    "summary": "Walk the Siq to the Treasury and camp under galaxies in Wadi Rum.",
+    "description": "Marvel at Petra’s rose-red façades, then bounce across dunes by 4×4 to a Bedouin camp. Stargaze from sandstone canyons and wake to an unforgettable desert sunrise.",
+    "imageCover": "https://images.unsplash.com/photos/irUJJCORE1c?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photos/sYMgkKkHpGI?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photos/1W1VSHDCZiQ?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photos/A8Ig1GNYfSk?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-02-24T09:00:00.000Z" },
+      { "$date": "2026-03-24T09:00:00.000Z" },
+      { "$date": "2026-04-21T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:21:25.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [35.4444, 30.3285],
+      "address": "Petra Visitor Center, Wadi Musa, Jordan",
+      "description": "Petra Entrance"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [35.4444, 30.3285],
+        "description": "The Siq to Treasury",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d12001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [35.4194, 29.5321],
+        "description": "Wadi Rum 4×4 Safari",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d12002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [35.4205, 29.56],
+        "description": "Desert Camp & Stargazing",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d12003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21f22f8fb814b56fa18a" },
+      { "$oid": "5c8a1f4e2f8fb814b56fa185" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": { "$oid": "6732a001a1a0f2c5a1d00014" },
+    "name": "Paris Classic Walks & Seine Cruise",
+    "slug": "paris-classic-walks-and-seine-cruise",
+    "duration": 2,
+    "maxGroupSize": 20,
+    "difficulty": "easy",
+    "ratingsAverage": 4.7,
+    "ratingsQuantity": 231,
+    "price": 319,
+    "summary": "Louvre to Eiffel by foot, then a sparkling evening cruise on the Seine.",
+    "description": "Admire masterpieces at the Louvre, meander through Tuileries, and climb the Arc for sweeping views. Glide along the Seine at dusk as the Iron Lady lights up.",
+    "imageCover": "https://images.unsplash.com/photos/sa1D3ZJP-Og?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photos/G-xOaNdOGu8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photos/RqG86-HBSr4?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photos/7-lk9qleb4LA?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      { "$date": "2026-03-20T09:00:00.000Z" },
+      { "$date": "2026-04-17T09:00:00.000Z" },
+      { "$date": "2026-05-15T09:00:00.000Z" }
+    ],
+    "createdAt": { "$date": "2025-11-12T07:21:35.000Z" },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [2.3364, 48.8606],
+      "address": "Musée du Louvre, Paris, France",
+      "description": "Louvre Pyramid"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [2.3364, 48.8606],
+        "description": "Louvre & Tuileries",
+        "day": 1,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d14001" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [2.2945, 48.8584],
+        "description": "Eiffel Tower View",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d14002" }
+      },
+      {
+        "type": "Point",
+        "coordinates": [2.313, 48.8625],
+        "description": "Seine Evening Cruise",
+        "day": 2,
+        "_id": { "$oid": "6732a001a1a0f2c5a1d14003" }
+      }
+    ],
+    "guides": [
+      { "$oid": "5c8a21f22f8fb814b56fa18a" },
+      { "$oid": "5c8a201e2f8fb814b56fa186" }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6732a001a1a0f2c5a1d00002"
+    },
+    "name": "El Nido Lagoon Hopping",
+    "slug": "el-nido-lagoon-hopping",
+    "duration": 5,
+    "maxGroupSize": 14,
+    "difficulty": "easy",
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 186,
+    "price": 499,
+    "summary": "Kayak through El Nido’s Big and Small Lagoons and picnic on hidden beaches.",
+    "description": "From emerald lagoons to towering limestone cliffs, El Nido is paradise found. Paddle glassy waters, snorkel with reef fish, and lounge on powdery coves like Shimizu and Secret Beach. Evenings feature grilled seafood and sky-full sunsets in Bacuit Bay.",
+    "imageCover": "https://images.unsplash.com/photo-1483728642387-6c2683cb21e8?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1566613158081-546a9b5b42d8?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1542257900-02161ea42707?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1554731680-0e2e3f6f6f36?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      {
+        "$date": "2026-02-05T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-03-05T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-04-02T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-11-12T07:20:05.000Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [119.4936, 11.1784],
+      "address": "Bacuit Bay, El Nido, Palawan, Philippines",
+      "description": "El Nido Town Pier"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [119.3667, 11.168],
+        "description": "Big Lagoon",
+        "day": 1,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d02001"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [119.373, 11.1586],
+        "description": "Small Lagoon",
+        "day": 2,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d02002"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [119.3804, 11.1792],
+        "description": "Shimizu Island",
+        "day": 3,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d02003"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21f22f8fb814b56fa18a"
+      },
+      {
+        "$oid": "5c8a201e2f8fb814b56fa186"
+      }
+    ],
+    "__v": 0
+  },
+  {
+    "_id": {
+      "$oid": "6732a001a1a0f2c5a1d0000a"
+    },
+    "name": "Machu Picchu Inca Trail Express",
+    "slug": "machu-picchu-inca-trail-express",
+    "duration": 4,
+    "maxGroupSize": 12,
+    "difficulty": "difficult",
+    "ratingsAverage": 4.9,
+    "ratingsQuantity": 262,
+    "price": 1099,
+    "summary": "A condensed trek culminating at the Sun Gate with sunrise over Machu Picchu.",
+    "description": "Follow ancient stone paths through cloud forests and Andean passes. Camp under misty peaks, visit Wiñay Wayna, and enter Machu Picchu via Inti Punku for a breathtaking first look.",
+    "imageCover": "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&w=1600&q=80",
+    "images": [
+      "https://images.unsplash.com/photo-1500049836744-11c1af8b7d8e?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1508261309751-9b5d8b0c6c76?auto=format&fit=crop&w=1600&q=80",
+      "https://images.unsplash.com/photo-1502786129293-79981df4e689?auto=format&fit=crop&w=1600&q=80"
+    ],
+    "startDates": [
+      {
+        "$date": "2026-05-15T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-06-12T09:00:00.000Z"
+      },
+      {
+        "$date": "2026-07-10T09:00:00.000Z"
+      }
+    ],
+    "createdAt": {
+      "$date": "2025-11-12T07:20:45.000Z"
+    },
+    "secretTour": false,
+    "startLocation": {
+      "type": "Point",
+      "coordinates": [-72.5449, -13.1631],
+      "address": "Aguas Calientes, Cusco, Peru",
+      "description": "Machu Picchu Gateway"
+    },
+    "locations": [
+      {
+        "type": "Point",
+        "coordinates": [-72.5449, -13.1631],
+        "description": "Aguas Calientes Trailhead",
+        "day": 1,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d0a001"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-72.4893, -13.1901],
+        "description": "Wiñay Wayna",
+        "day": 3,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d0a002"
+        }
+      },
+      {
+        "type": "Point",
+        "coordinates": [-72.5047, -13.1619],
+        "description": "Inti Punku (Sun Gate)",
+        "day": 4,
+        "_id": {
+          "$oid": "6732a001a1a0f2c5a1d0a003"
+        }
+      }
+    ],
+    "guides": [
+      {
+        "$oid": "5c8a21d02f8fb814b56fa189"
+      },
+      {
+        "$oid": "5c8a1f4e2f8fb814b56fa185"
+      }
+    ],
+    "__v": 0
+  }
+]

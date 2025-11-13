@@ -4,21 +4,23 @@ import {
   Heading,
   Text,
   Stack,
-  Badge,
   Flex,
   Icon,
   Button,
 } from '@chakra-ui/react';
-import { Link } from 'react-router-dom';
-import {
-  FiMapPin,
-  FiCalendar,
-  FiFlag,
-  FiUsers,
-  FiStar,
-} from 'react-icons/fi';
+import { useNavigate } from 'react-router-dom';
+import { FiMapPin, FiCalendar, FiFlag, FiUsers, FiStar } from 'react-icons/fi';
+import { useTourStore } from '../store/useTourStore';
 
 export default function TourCard({ tour }) {
+  const navigate = useNavigate();
+  const { setCurrentTour } = useTourStore();
+
+  const handleClick = () => {
+    setCurrentTour(tour); // ✅ Save clicked tour in Zustand
+    navigate(`/tour/${tour.slug}`); // ✅ Navigate to details page
+  };
+
   return (
     <Box
       bg="white"
@@ -29,9 +31,15 @@ export default function TourCard({ tour }) {
       _hover={{ transform: 'scale(1.02)', boxShadow: 'xl' }}
     >
       {/* --- IMAGE HEADER --- */}
-      <Box position="relative" h="240px" overflow="hidden">
+      <Box
+        position="relative"
+        h="240px"
+        overflow="hidden"
+        onClick={handleClick}
+        cursor="pointer"
+      >
         <Image
-          src={`/img/tours/${tour.imageCover}`}
+          src={tour.imageCover}
           alt={tour.name}
           w="100%"
           h="100%"
@@ -39,12 +47,7 @@ export default function TourCard({ tour }) {
           transition="0.4s"
           _hover={{ transform: 'scale(1.05)' }}
         />
-        <Box
-          position="absolute"
-          inset="0"
-          bg="rgba(0,0,0,0.25)"
-          zIndex="1"
-        />
+        <Box position="absolute" inset="0" bg="rgba(0,0,0,0.25)" zIndex="1" />
         <Heading
           position="absolute"
           bottom="4"
@@ -98,8 +101,6 @@ export default function TourCard({ tour }) {
         </Stack>
       </Box>
 
-<Box borderTop="1px solid" borderColor="gray.100" />
-
       {/* --- FOOTER --- */}
       <Flex
         justify="space-between"
@@ -124,11 +125,9 @@ export default function TourCard({ tour }) {
           </Flex>
         </Box>
 
-        <Link to={`/tour/${tour.slug}`}>
-          <Button colorScheme="teal" size="sm">
-            Details
-          </Button>
-        </Link>
+        <Button onClick={handleClick} colorScheme="teal" size="sm">
+          Details
+        </Button>
       </Flex>
     </Box>
   );
