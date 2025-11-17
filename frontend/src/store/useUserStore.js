@@ -18,6 +18,9 @@ import {
   verifyEmailCode,
   sendSmsOtp as apiSendSms,
   verifySmsOtp as apiVerifySms,
+  sendPhoneVerificationOtp,
+  verifyPhoneVerificationOtp,
+  checkPhoneUnique,
 } from "../api/authApi";
 
 export const useUserStore = create(
@@ -124,6 +127,21 @@ export const useUserStore = create(
           set({ user: res.data.data.user, token: res.data.token });
           return res;
         },
+        // PHONE VERIFICATION (ACCOUNT SETTINGS)
+        sendPhoneVerificationOtp: async (phone) => {
+          return await sendPhoneVerificationOtp(phone);
+        },
+
+        verifyPhoneVerificationOtp: async (code) => {
+          return await verifyPhoneVerificationOtp(code);
+        },
+        checkPhoneUnique: async (phone) => {
+          try {
+            return await checkPhoneUnique(phone);
+          } catch (err) {
+            throw err.response?.data?.message || "Phone number invalid";
+          }
+        },
         // -------------------------------------
         // LOGOUT
         // -------------------------------------
@@ -168,7 +186,7 @@ export const useUserStore = create(
         updateProfile: async (formData) => {
           try {
             const res = await updateMe(formData);
-            set({ user: res.data.user });
+            set({ user: { ...get().user, ...res.data.user } });
             return res.data.user;
           } catch (err) {
             throw err.response?.data?.message || "Failed updating profile";

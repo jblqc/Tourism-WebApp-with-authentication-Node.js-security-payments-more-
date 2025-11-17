@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import { useAuth } from "../hooks/useAuth";
 import {
   Box,
@@ -18,19 +18,42 @@ import {
   Flex,
   Icon,
   useColorModeValue,
-  chakra,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
 } from "@chakra-ui/react";
-import { FiUser, FiLock, FiSettings } from "react-icons/fi";
+
+import { FiUser, FiLock, FiSettings, FiPhone } from "react-icons/fi";
 import { useToastMessage } from "../utils/toast";
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
 
 export default function Account() {
-  const { user, updateProfile, updatePassword } = useAuth();
+  const {
+    user,
+    updateProfile,
+    updatePassword,
+    sendPhoneVerificationOtp,
+    verifyPhoneVerificationOtp,
+    checkPhoneUnique,
+  } = useAuth();
   const { showSuccess, showError } = useToastMessage();
 
-  if (!user) return <Text textAlign="center">Loading user…</Text>;
+  /* ---------------------------------------------------------
+     STATE
+  --------------------------------------------------------- */
+  const [phone, setPhone] = useState(user?.phoneNumber || "");
+  const [phoneVerified, setPhoneVerified] = useState(user?.phoneVerified);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [otpSent, setOtpSent] = useState(false);
+  const [otpCode, setOtpCode] = useState("");
+  const [modalLoading, setModalLoading] = useState(false);
 
   // Colors
   const glassBg = useColorModeValue(
@@ -48,7 +71,33 @@ export default function Account() {
       "0 8px 20px rgba(0,0,0,0.04), inset 0 0 0 1px rgba(255,255,255,0.15)",
   };
 
-  // Update profile
+  /* ---------------------------------------------------------
+     HELPERS
+  --------------------------------------------------------- */
+  const formatPhone = (num) => {
+    let n = num.replace(/\D/g, "");
+
+    if (!n.startsWith("63")) n = "63" + n.replace(/^0+/, "");
+    return "+" + n;
+  };
+
+  /* ---------------------------------------------------------
+     PHONE UNIQUE CHECK
+  --------------------------------------------------------- */
+  const handleCheckPhoneUnique = async () => {
+    if (!phone) return;
+
+    try {
+      await checkPhoneUnique(formatPhone(phone));
+    } catch (err) {
+      showError("Phone number already in use");
+      setPhone(user.phoneNumber || "");
+    }
+  };
+
+  /* ---------------------------------------------------------
+     UPDATE PROFILE
+  --------------------------------------------------------- */
   const handleUserData = async (e) => {
     e.preventDefault();
     const form = new FormData(e.target);
@@ -61,9 +110,17 @@ export default function Account() {
     }
   };
 
-  // Update password
+  /* ---------------------------------------------------------
+     UPDATE PASSWORD
+     (Google users cannot change password)
+  --------------------------------------------------------- */
   const handlePassword = async (e) => {
     e.preventDefault();
+    if (user.provider === "google") {
+      showError("Google accounts cannot change password");
+      return;
+    }
+
     const data = new FormData(e.target);
     const payload = Object.fromEntries(data);
 
@@ -76,27 +133,52 @@ export default function Account() {
     }
   };
 
+  /* ---------------------------------------------------------
+     PHONE VERIFICATION HANDLERS
+  --------------------------------------------------------- */
+  const handleSendPhoneOtp = async () => {
+    setModalLoading(true);
+    try {
+      await sendPhoneVerificationOtp(formatPhone(phone));
+      showSuccess("Verification code sent!");
+      setOtpSent(true);
+    } catch (err) {
+      showError(err?.response?.data?.message || "Failed sending OTP");
+    } finally {
+      setModalLoading(false);
+    }
+  };
+
+  const handleVerifyPhoneOtp = async () => {
+    if (!otpCode) {
+      showError("Please enter the OTP code");
+      return;
+    }
+
+    setModalLoading(true);
+    try {
+      await verifyPhoneVerificationOtp(otpCode);
+      showSuccess("Phone verified!");
+      setPhoneVerified(true);
+      setIsModalOpen(false);
+    } catch (err) {
+      showError("Incorrect or expired OTP");
+    } finally {
+      setModalLoading(false);
+    }
+  };
+  if (!user) return <Text textAlign="center">Loading user…</Text>;
+
   return (
     <Box
       minH="100vh"
       px={4}
       pt="110px"
       pb={20}
-      bg="#F6F1FF" // 💜 subtle modern lilac (not a gradient)
+      bg="#F6F1FF"
       position="relative"
       overflow="hidden"
     >
-      {/* ❇️ Ambient floating shapes (visionOS style) */}
-      <AmbientBlob top="-150px" left="-80px" size="380px" color="white" />
-      <AmbientBlob bottom="-120px" right="-60px" size="300px" color="#C7A4FF" />
-      <AmbientBlob
-        top="40%"
-        left="55%"
-        size="220px"
-        color="#E9D8FD"
-        opacity={0.45}
-      />
-
       <Container maxW="7xl" position="relative" zIndex={5}>
         <Grid templateColumns={["1fr", null, "240px 1fr"]} gap={12}>
           {/* -------------------------- SIDEBAR --------------------------- */}
@@ -108,7 +190,6 @@ export default function Account() {
               p={6}
               bg={glassBg}
             >
-              {/* Avatar with neon glass ring */}
               <Box
                 p="6px"
                 borderRadius="full"
@@ -129,29 +210,12 @@ export default function Account() {
                 {user.name}
               </Text>
 
-              {/* New modern nav */}
               <VStack spacing={2} mt={8} w="100%">
                 <SidebarLink icon={FiSettings} label="Settings" active />
-                <SidebarLink icon={FiUser} label="Bookings" />
-                <SidebarLink icon={FiUser} label="Reviews" />
-                <SidebarLink icon={FiUser} label="Billing" />
+                <SidebarLink icon={FiUser} label="My Profile" />
+                <SidebarLink icon={FiSettings} label="My Bookings" />
+                <SidebarLink icon={FiSettings} label="My Reviews" />
               </VStack>
-
-              {/* Admin */}
-              {user.role === "admin" && (
-                <>
-                  <Divider my={6} />
-                  <Text fontSize="xs" textTransform="uppercase" opacity={0.6}>
-                    Admin Tools
-                  </Text>
-
-                  <VStack spacing={2} mt={3} w="100%">
-                    <SidebarLink label="Manage Tours" admin />
-                    <SidebarLink label="Manage Users" admin />
-                    <SidebarLink label="Manage Reviews" admin />
-                  </VStack>
-                </>
-              )}
             </Flex>
           </GridItem>
 
@@ -159,29 +223,22 @@ export default function Account() {
           <GridItem>
             <VStack spacing={10}>
               {/* PROFILE CARD */}
-              <MotionBox
-                sx={glass}
-                bg={glassBg}
-                p={8}
-                w="100%"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.01 }}
-              >
+              <MotionBox sx={glass} bg={glassBg} p={8} w="100%">
                 <CardHeader title="Profile Information" icon={FiUser} />
 
                 <form onSubmit={handleUserData}>
                   <VStack spacing={5}>
+                    {/* NAME */}
                     <FormControl>
                       <FormLabel>Name</FormLabel>
                       <Input
                         name="name"
                         defaultValue={user.name}
                         bg="whiteAlpha.700"
-                        size="md"
                       />
                     </FormControl>
 
+                    {/* EMAIL */}
                     <FormControl>
                       <FormLabel>Email</FormLabel>
                       <Input
@@ -189,43 +246,59 @@ export default function Account() {
                         type="email"
                         defaultValue={user.email}
                         bg="whiteAlpha.700"
-                        size="md"
                       />
                     </FormControl>
 
+                    {/* PHONE NUMBER */}
+                    <FormControl>
+                      <FormLabel>Phone Number</FormLabel>
+                      <Input
+                        name="phoneNumber"
+                        value={phone}
+                        onChange={(e) => setPhone(formatPhone(e.target.value))}
+                        onBlur={handleCheckPhoneUnique}
+                        bg="whiteAlpha.700"
+                        disabled={phoneVerified}
+                      />
+
+                      {/* Verify Button */}
+                      {!phoneVerified ? (
+                        <Button
+                          mt={2}
+                          size="sm"
+                          leftIcon={<FiPhone />}
+                          colorScheme="purple"
+                          onClick={() => setIsModalOpen(true)}
+                        >
+                          Verify Phone Number
+                        </Button>
+                      ) : (
+                        <Text mt={2} fontSize="sm" color="green.500">
+                          ✔ Phone Verified
+                        </Text>
+                      )}
+                    </FormControl>
+
+                    {/* PHOTO */}
                     <FormControl>
                       <FormLabel>Profile Photo</FormLabel>
 
                       <Flex
                         align="center"
-                        gap={4}
-                        p={3}
-                        borderRadius="md"
-                        bg="whiteAlpha.700"
-                        backdropFilter="blur(10px)"
-                        border="1px solid rgba(0,0,0,0.1)"
-                        _hover={{ borderColor: "purple.400" }}
-                        transition="0.2s"
-                        cursor="pointer"
                         as="label"
                         htmlFor="photoUpload"
+                        cursor="pointer"
+                        gap={4}
+                        p={3}
+                        bg="whiteAlpha.700"
+                        borderRadius="md"
                       >
                         <Button colorScheme="purple" size="sm">
                           Upload Photo
                         </Button>
-
-                        <Text
-                          fontSize="sm"
-                          color="gray.600"
-                          noOfLines={1}
-                          flex="1"
-                          id="uploadFilename"
-                        >
-                          No file chosen
-                        </Text>
+                        <Text id="uploadFilename">No file chosen</Text>
                       </Flex>
 
-                      {/* hidden real file input */}
                       <Input
                         id="photoUpload"
                         name="photo"
@@ -236,12 +309,12 @@ export default function Account() {
                           const file = e.target.files[0];
                           document.getElementById(
                             "uploadFilename"
-                          ).textContent = file ? file.name : "No file chosen";
+                          ).textContent = file?.name || "No file chosen";
                         }}
                       />
                     </FormControl>
 
-                    <Button mt={3} colorScheme="purple" w="160px" type="submit">
+                    <Button colorScheme="purple" w="160px" type="submit">
                       Save Changes
                     </Button>
                   </VStack>
@@ -249,27 +322,20 @@ export default function Account() {
               </MotionBox>
 
               {/* PASSWORD CARD */}
-              <MotionBox
-                sx={glass}
-                bg={glassBg}
-                p={8}
-                w="100%"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                whileHover={{ scale: 1.01 }}
-              >
+              <MotionBox sx={glass} bg={glassBg} p={8} w="100%">
                 <CardHeader title="Change Password" icon={FiLock} />
 
                 <form onSubmit={handlePassword}>
-                  <VStack spacing={5}>
+                  <VStack
+                    spacing={5}
+                    opacity={user.provider === "google" ? 0.5 : 1}
+                  >
                     <FormControl isRequired>
-                      <FormLabel isRequired>Current Password</FormLabel>
+                      <FormLabel>Current Password</FormLabel>
                       <Input
                         name="passwordCurrent"
                         type="password"
-                        required
-                        bg="whiteAlpha.700"
-                        size="md"
+                        disabled={user.provider === "google"}
                       />
                     </FormControl>
 
@@ -278,9 +344,7 @@ export default function Account() {
                       <Input
                         name="password"
                         type="password"
-                        required
-                        bg="whiteAlpha.700"
-                        size="md"
+                        disabled={user.provider === "google"}
                       />
                     </FormControl>
 
@@ -289,15 +353,25 @@ export default function Account() {
                       <Input
                         name="passwordConfirm"
                         type="password"
-                        required
-                        bg="whiteAlpha.700"
-                        size="md"
+                        disabled={user.provider === "google"}
                       />
                     </FormControl>
 
-                    <Button mt={3} colorScheme="purple" w="180px" type="submit">
+                    <Button
+                      mt={3}
+                      colorScheme="purple"
+                      w="180px"
+                      type="submit"
+                      disabled={user.provider === "google"}
+                    >
                       Update Password
                     </Button>
+
+                    {user.provider === "google" && (
+                      <Text fontSize="sm" color="red.400">
+                        Google accounts cannot change password
+                      </Text>
+                    )}
                   </VStack>
                 </form>
               </MotionBox>
@@ -305,13 +379,71 @@ export default function Account() {
           </GridItem>
         </Grid>
       </Container>
+
+      {/* MODAL: VERIFY PHONE */}
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        isCentered
+      >
+        <ModalOverlay />
+        <ModalContent>
+          <ModalHeader>Verify Phone Number</ModalHeader>
+          <ModalCloseButton />
+
+          <ModalBody>
+            {!otpSent ? (
+              <VStack spacing={4}>
+                <Text fontSize="sm">Send a verification code to:</Text>
+                <Text fontWeight="bold">{formatPhone(phone)}</Text>
+
+                <Button
+                  colorScheme="purple"
+                  w="100%"
+                  isLoading={modalLoading}
+                  onClick={handleSendPhoneOtp}
+                >
+                  Send Verification Code
+                </Button>
+              </VStack>
+            ) : (
+              <VStack spacing={4}>
+                <Text fontSize="sm">
+                  Enter the 6-digit code sent to your phone.
+                </Text>
+                <Input
+                  value={otpCode}
+                  onChange={(e) => setOtpCode(e.target.value)}
+                  placeholder="123456"
+                  maxLength={6}
+                />
+
+                <Button
+                  colorScheme="purple"
+                  w="100%"
+                  isLoading={modalLoading}
+                  onClick={handleVerifyPhoneOtp}
+                >
+                  Verify
+                </Button>
+              </VStack>
+            )}
+          </ModalBody>
+
+          <ModalFooter>
+            <Button variant="ghost" onClick={() => setIsModalOpen(false)}>
+              Cancel
+            </Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
     </Box>
   );
 }
 
 /* -------------------------- COMPONENTS -------------------------- */
 
-function SidebarLink({ icon, label, active = false, admin = false }) {
+function SidebarLink({ icon, label, active = false }) {
   return (
     <Flex
       w="100%"
@@ -322,8 +454,7 @@ function SidebarLink({ icon, label, active = false, admin = false }) {
       borderRadius="md"
       cursor="pointer"
       bg={active ? "purple.200" : "whiteAlpha.500"}
-      _hover={{ bg: admin ? "pink.200" : "purple.100" }}
-      transition="0.2s"
+      _hover={{ bg: "purple.100" }}
     >
       {icon && <Icon as={icon} color="purple.600" />}
       <Text>{label}</Text>
@@ -337,33 +468,5 @@ function CardHeader({ icon, title }) {
       <Icon as={icon} w={6} h={6} color="purple.500" />
       <Heading fontSize="xl">{title}</Heading>
     </HStack>
-  );
-}
-
-// VisionOS floating ambient blobs
-function AmbientBlob({
-  top,
-  left,
-  bottom,
-  right,
-  size,
-  color,
-  opacity = 0.55,
-}) {
-  return (
-    <Box
-      position="absolute"
-      top={top}
-      left={left}
-      bottom={bottom}
-      right={right}
-      w={size}
-      h={size}
-      bg={color}
-      opacity={opacity}
-      filter="blur(130px)"
-      borderRadius="50%"
-      pointerEvents="none"
-    />
   );
 }

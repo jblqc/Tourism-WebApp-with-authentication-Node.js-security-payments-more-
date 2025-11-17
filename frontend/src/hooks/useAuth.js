@@ -1,3 +1,4 @@
+// src/hooks/useAuth.js
 import { useUserStore } from "../store/useUserStore";
 
 export const useAuth = () => {
@@ -14,18 +15,22 @@ export const useAuth = () => {
     deleteAccount,
     googleLogin,
 
-    // OTP actions
+    // OTP
     sendEmailCode,
     verifyEmailCode,
     sendSmsOtp,
     verifySmsOtp,
+    checkPhoneUnique,
+
+    // Phone Verification
+    sendPhoneVerificationOtp,
+    verifyPhoneVerificationOtp,
   } = useUserStore();
 
-  /* ----------------------------------------------------------------
-     GOOGLE LOGIN BUTTON INITIALIZER
-  ---------------------------------------------------------------- */
+  /* -------------------------
+       Google Button
+  ------------------------- */
   const initGoogleLoginButton = (onSuccess) => {
-    // google script not loaded yet
     if (!window.google?.accounts?.id) return;
 
     window.google.accounts.id.initialize({
@@ -35,8 +40,6 @@ export const useAuth = () => {
 
     const btn = document.getElementById("google-btn");
     if (!btn) return;
-
-    // Prevent double buttons when switching login/signup
     btn.innerHTML = "";
 
     window.google.accounts.id.renderButton(btn, {
@@ -55,22 +58,27 @@ export const useAuth = () => {
     login,
     signup,
     logout,
+    googleLogin,
+
     updateProfile,
     updatePassword,
     forgotPassword,
     resetPassword,
     deleteAccount,
-    googleLogin,
 
-    // OTP EMAIL
+    // Email OTP
     sendEmailCode,
     verifyEmailCode,
 
-    // OTP SMS
+    // SMS OTP
     sendSmsOtp,
     verifySmsOtp,
 
-    // GOOGLE BTN
+    // Phone verification
+    sendPhoneVerificationOtp,
+    verifyPhoneVerificationOtp,
+    checkPhoneUnique,
+
     initGoogleLoginButton,
   };
 };

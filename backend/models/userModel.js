@@ -35,6 +35,10 @@ const userSchema = new mongoose.Schema({
     unique: true,
     sparse: true, // allows null / undefined
   },
+  phoneVerified: {
+    type: Boolean,
+    default: false,
+  },
 
   // EMAIL USERS ONLY
   password: {
